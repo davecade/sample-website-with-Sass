@@ -1,5 +1,18 @@
 // UTILITIES
 
+.current {
+    border-bottom: 2px solid $main-color;
+}
+
 .container {
     max-width: $website-width;
+    margin: 0 auto;
+}
+
+%flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+.current {
+  border-bottom: 2px solid #ffbc00;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +23,61 @@
   font-family: 'Comic Neue';
 }
 
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
 body {
   background: #E5E5E5;
+}
+
+#header-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/dave_showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+  color: #fff;
+}
+
+.navbar-logo {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  opacity: 0.9;
+}
+
+.navbar-items {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.navbar-items .item a {
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar-items .item a:hover {
+  opacity: 0.9;
+  border-bottom: 2px solid #cccccc;
 }
 /*# sourceMappingURL=style.css.map */

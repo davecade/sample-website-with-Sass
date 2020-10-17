@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 @import 'variables';
+@import 'utilities';
 
+
+
+// Base Settings
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +12,61 @@
     font-family: 'Comic Neue';
 }
 
+h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
 body {
     background: $main-bg-color;
+}
+
+// Header
+#header-home {
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+}
+
+.navbar {
+    @extend %flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0;
+    color: $light-color;
+
+    &-logo {
+        font-size: 3rem;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &-items {
+        display: flex;
+        text-transform: uppercase;
+        .item a {
+            cursor: pointer;
+            padding: 1rem;
+            margin: 0 0.5rem;
+
+            &:hover {
+                opacity: 0.9;
+                border-bottom: 2px solid $medium-color;
+            }
+        }
+    }
 }
