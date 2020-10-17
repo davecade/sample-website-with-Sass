@@ -97,10 +97,88 @@ body {
 // Home: Section A
 #home-a {
     .special {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        @extend %grid;
         grid-gap: 1rem;
-        text-align: center;
         margin-bottom: 3rem;
+    }
+}
+
+// Home: Section B
+#home-b {
+    .stats {
+        @extend %grid;
+
+        div {
+            padding: 3rem 0;
+
+            p {
+                font-size: 1.3rem;
+                margin: 1rem 0 2rem 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        & div:nth-child(even) {
+            background: $medium-color;
+        }
+
+    }
+}
+
+#home-c {
+    .process {
+        @extend %grid;
+
+        .process-step {
+            @extend %flex;
+            margin-bottom: 2rem;
+            
+            .process-img {
+                @extend %flex;
+                position: relative;
+                width: 140px;
+                height: 140px;
+                color: $light-color;
+                background: $darker-color;
+                border-radius: 50%;
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                transition: all .8s;
+
+                .number {
+                    @extend %flex;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: $main-color;
+                    color: $dark-color;
+                    font-weight: bold;
+                    transition: all .8s;
+                }
+
+                &:hover {
+                    background: $main-color;
+                    color: $dark-color;
+                    width: 160px;
+                    height: 160px;
+
+                    .number {
+                        background: $darker-color;
+                        color: $light-color;
+                    }
+                }
+            }
+
+            h3 {
+                margin-bottom: .5rem;
+            }
+        }
     }
 }
