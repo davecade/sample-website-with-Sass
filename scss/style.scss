@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
 @import 'variables';
 @import 'utilities';
 
@@ -9,10 +10,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comic Neue';
+    font-family: 'Comic Neue', sans-serif;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     text-transform: uppercase;
 }
 
@@ -37,36 +40,67 @@ body {
 #header-home {
     background: $bg-image no-repeat center center/cover;
     height: 100vh;
-}
 
-.navbar {
-    @extend %flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 0;
-    color: $light-color;
+    .navbar {
+        @extend %flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 0;
+        color: $light-color;
 
-    &-logo {
-        font-size: 3rem;
-        cursor: pointer;
-
-        &:hover {
-            opacity: 0.9;
-        }
-    }
-
-    &-items {
-        display: flex;
-        text-transform: uppercase;
-        .item a {
+        &-logo {
+            font-size: 3rem;
             cursor: pointer;
-            padding: 1rem;
-            margin: 0 0.5rem;
+
+            a {
+                font-family: 'Sansita Swashed', sans-serif;
+            }
 
             &:hover {
                 opacity: 0.9;
-                border-bottom: 2px solid $medium-color;
             }
         }
+
+        &-items {
+            display: flex;
+            text-transform: uppercase;
+
+            .item a {
+                cursor: pointer;
+                padding: 1rem;
+                margin: 0 0.5rem;
+
+                &:hover {
+                    opacity: 0.9;
+                    border-bottom: 2px solid $medium-color;
+                }
+            }
+        }
+    }
+
+    .header-content {
+        @extend %flex;
+        margin-top: 200px;
+        color: $light-color;
+        font-weight: bold;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Home: Section A
+#home-a {
+    .special {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        text-align: center;
+        margin-bottom: 3rem;
     }
 }

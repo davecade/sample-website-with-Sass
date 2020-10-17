@@ -9,10 +9,57 @@
     margin: 0 auto;
 }
 
+.lead {
+    @extend %flex;
+    margin: 3rem 0;
+    h2 {
+        font-size: 1.8rem;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+.img-container {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 1.7rem;
+
+    &.node {
+        margin-bottom: 0.9rem;
+    }
+}
+
+.bottom-line {
+    height: 1px;
+    width: 100px;
+    margin: 1rem 0;
+    border-bottom: 3px solid $main-color;
+}
+
 %flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+%btn-shared {
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 2rem;
+    
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btn-light {
+    @extend %btn-shared;
+    background: $light-color;
+    color: $dark-color;
 }
