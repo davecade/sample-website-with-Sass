@@ -22,16 +22,6 @@
   font-size: 1.3rem;
 }
 
-.img-container {
-  display: inline-block;
-  width: 100px;
-  margin-bottom: 1.7rem;
-}
-
-.img-container.node {
-  margin-bottom: 0.9rem;
-}
-
 .bottom-line {
   height: 1px;
   width: 100px;
@@ -39,7 +29,7 @@
   border-bottom: 4px solid #ffbc00;
 }
 
-.lead, #header-home .navbar, #header-home .header-content, #home-c .process .process-step, #home-c .process .process-step .process-img, #home-c .process .process-step .process-img .number {
+.lead, .navbar, #header-home .header-content, #home-c .process .process-step, #home-c .process .process-step .process-img, #home-c .process .process-step .process-img .number, #footer .footer-content, #footer .footer-content .social, #footer .footer-content .social .icon-bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +37,7 @@
   text-align: center;
 }
 
-#home-a .special, #home-b .stats, #home-c .process {
+#home-a .special, #home-b .stats, #home-c .process, #about .about-me {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -99,45 +89,45 @@ body {
   background: #dcdcdc;
 }
 
-#header-home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/dave_showcase.jpg") no-repeat center center/cover;
-  height: 100vh;
-}
-
-#header-home .navbar {
+.navbar {
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: #fff;
 }
 
-#header-home .navbar-logo {
+.navbar-logo {
   font-size: 3rem;
   cursor: pointer;
 }
 
-#header-home .navbar-logo a {
+.navbar-logo a {
   font-family: 'Sansita Swashed', sans-serif;
 }
 
-#header-home .navbar-logo:hover {
+.navbar-logo:hover {
   opacity: 0.9;
 }
 
-#header-home .navbar-items {
+.navbar-items {
   display: flex;
   text-transform: uppercase;
 }
 
-#header-home .navbar-items .item a {
+.navbar-items .item a {
   cursor: pointer;
   padding: 1rem;
   margin: 0 0.5rem;
 }
 
-#header-home .navbar-items .item a:hover {
+.navbar-items .item a:hover {
   opacity: 0.9;
   border-bottom: 2px solid #cccccc;
+}
+
+#header-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/dave_showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
 }
 
 #header-home .header-content {
@@ -154,9 +144,28 @@ body {
   font-size: 1.5rem;
 }
 
+#header-inner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/dave_showcase.jpg") no-repeat 1% 10%/cover;
+  border-bottom: 2px solid #ffbc00;
+}
+
+#header-inner .header-content {
+  display: none;
+}
+
 #home-a .special {
   grid-gap: 1rem;
   margin-bottom: 3rem;
+}
+
+#home-a .special .img-container {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 1.7rem;
+}
+
+#home-a .special .img-container.node {
+  margin-bottom: 0.9rem;
 }
 
 #home-b .stats div {
@@ -208,7 +217,7 @@ body {
 
 #home-c .process .process-step .process-img:hover {
   background: #ffbc00;
-  color: #333;
+  color: #111;
   width: 160px;
   height: 160px;
 }
@@ -220,5 +229,51 @@ body {
 
 #home-c .process .process-step h3 {
   margin-bottom: .5rem;
+}
+
+#about .about-me {
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#about .about-me .about-content {
+  background: #fff;
+  border-left: 3px solid #ffbc00;
+}
+
+#about .about-me .about-content h4 {
+  font-size: 1.5rem;
+  padding: 2rem 0 1rem 0;
+}
+
+#about .about-me .about-content p {
+  font-size: 1.2rem;
+}
+
+#footer {
+  background: #111;
+  color: #fff;
+}
+
+#footer .footer-content {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+#footer .footer-content .social {
+  flex-direction: row;
+}
+
+#footer .footer-content .social .icon-bg {
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
