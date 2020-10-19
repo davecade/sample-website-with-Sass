@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-#home-a .special, #home-b .stats, #home-c .process, #about .about-me {
+#home-a .special, #home-b .stats, #home-c .process, #about .about-me, #about .awards, #testimonials .testimonials {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
@@ -237,9 +237,20 @@ body {
   margin-bottom: 2rem;
 }
 
+#about .about-me .img-container img {
+  filter: grayscale(100%);
+  transition: all 0.5s;
+  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.75);
+}
+
+#about .about-me .img-container img:hover {
+  filter: grayscale(0%);
+}
+
 #about .about-me .about-content {
   background: #fff;
   border-left: 3px solid #ffbc00;
+  box-shadow: 8px 0px 19px 0px rgba(0, 0, 0, 0.75);
 }
 
 #about .about-me .about-content h4 {
@@ -249,6 +260,68 @@ body {
 
 #about .about-me .about-content p {
   font-size: 1.2rem;
+}
+
+#about .awards {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem 0 2rem 0;
+}
+
+#about .awards .award .img-container {
+  display: inline-block;
+  width: 100px;
+}
+
+#about .awards .award h2 {
+  margin: 1rem 0;
+}
+
+#technical-skills {
+  background: #333;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+#technical-skills .lead {
+  margin-bottom: 0;
+}
+
+#technical-skills .skills .skill .progress-bar {
+  height: 20px;
+  width: 100%;
+  background: #cccccc;
+  border-radius: 5px;
+}
+
+#technical-skills .skills .skill .progress-bar .skill-level {
+  background: #ffbc00;
+  border-radius: 5px;
+  height: 100%;
+}
+
+#testimonials .testimonials {
+  grid-gap: 1rem;
+}
+
+#testimonials .testimonials .testimonial p {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#testimonials .testimonials .testimonial .img-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem 0 3rem 0;
+}
+
+#testimonials .testimonials .testimonial .img-container img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
 }
 
 #footer {
