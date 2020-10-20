@@ -29,7 +29,7 @@
   border-bottom: 4px solid #ffbc00;
 }
 
-.lead, .navbar, #header-home .header-content, #home-c .process .process-step, #home-c .process .process-step .process-img, #home-c .process .process-step .process-img .number, #footer .footer-content, #footer .footer-content .social, #footer .footer-content .social .icon-bg {
+.lead, .navbar, #header-home .header-content, #home-c .process .process-step, #home-c .process .process-step .process-img, #home-c .process .process-step .process-img .number, #contact .contact-form .form, #banner, #footer .footer-content, #footer .footer-content .social, #footer .footer-content .social .icon-bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,20 +43,30 @@
   text-align: center;
 }
 
-.btn-light {
+.btn-light, .btn-dark {
   padding: 1rem 1.5rem;
   border-radius: 3px;
   cursor: pointer;
   margin: 2rem;
+  transition: all .5s;
+  outline: none;
+  border: none;
 }
 
-.btn-light:hover {
+.btn-light:hover, .btn-dark:hover {
   opacity: 0.9;
+  background: #ffbc00;
+  color: #333;
 }
 
 .btn-light {
   background: #fff;
   color: #333;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
 }
 
 * {
@@ -250,7 +260,6 @@ body {
 #about .about-me .about-content {
   background: #fff;
   border-left: 3px solid #ffbc00;
-  box-shadow: 8px 0px 19px 0px rgba(0, 0, 0, 0.75);
 }
 
 #about .about-me .about-content h4 {
@@ -331,13 +340,12 @@ body {
 #projects-section .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
 }
 
 #projects-section .projects .project {
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
 
 #projects-section .projects .project .img-container {
@@ -397,6 +405,70 @@ body {
   transition: all 1s;
 }
 
+#contact .contact-form .form button {
+  width: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#contact .contact-form .input-fields {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'name email' 'subject phone' 'message message';
+  grid-gap: 1rem;
+}
+
+#contact .contact-form .input-fields .name {
+  grid-area: name;
+}
+
+#contact .contact-form .input-fields .email {
+  grid-area: email;
+}
+
+#contact .contact-form .input-fields .subject {
+  grid-area: subject;
+}
+
+#contact .contact-form .input-fields .phone {
+  grid-area: phone;
+}
+
+#contact .contact-form .input-fields .message {
+  grid-area: message;
+}
+
+#contact .contact-form .input-fields input {
+  padding: 0.5rem;
+}
+
+#contact-info {
+  background: #333;
+}
+
+#contact-info .info-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  color: #fff;
+  padding: 2.5rem 0;
+}
+
+#contact-info .info-fields i {
+  font-size: 2rem;
+}
+
+#contact-info .info-fields h3 {
+  margin: .5rem 0;
+}
+
+#banner {
+  padding: 4rem 0;
+  font-size: 3rem;
+  background: #ffbc00;
+  color: #333;
+}
+
 #footer {
   background: #111;
   color: #fff;
@@ -421,5 +493,11 @@ body {
   font-size: 2rem;
   margin: 0 1rem;
   cursor: pointer;
+  transition: all .5s;
+}
+
+#footer .footer-content .social .icon-bg:hover {
+  color: #ffbc00;
+  border: 2px solid #ffbc00;
 }
 /*# sourceMappingURL=style.css.map */
