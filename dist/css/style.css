@@ -500,4 +500,21 @@ body {
   color: #ffbc00;
   border: 2px solid #ffbc00;
 }
+
+@media (max-width: 800px) {
+  #header-home .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+  #header-home .navbar .navbar-logo {
+    margin-bottom: 1rem;
+  }
+  #footer .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer .footer-content p {
+    margin-bottom: 2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
