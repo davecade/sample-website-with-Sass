@@ -95,6 +95,10 @@ img {
   width: 100%;
 }
 
+#body-content {
+  min-height: 100vh;
+}
+
 body {
   background: #dcdcdc;
 }
@@ -472,6 +476,8 @@ body {
 #footer {
   background: #111;
   color: #fff;
+  position: absolute;
+  width: 100%;
 }
 
 #footer .footer-content {
@@ -502,19 +508,75 @@ body {
 }
 
 @media (max-width: 800px) {
-  #header-home .navbar {
+  #header-home .navbar, #header-inner .navbar {
     display: flex;
     flex-direction: column;
   }
-  #header-home .navbar .navbar-logo {
-    margin-bottom: 1rem;
+  #header-home .navbar .navbar-items, #header-inner .navbar .navbar-items {
+    margin: 1rem;
   }
   #footer .footer-content {
     display: flex;
     flex-direction: column;
   }
   #footer .footer-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  #about .about-me {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #about .about-me .img-container {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  #about .about-me .about-content {
+    margin: 0 1.5rem;
+  }
+  #about .about-me .about-content p {
+    padding: 0 1.5rem;
+  }
+  #about .awards {
+    margin: 0 1.5rem;
+  }
+  #technical-skills .skills {
+    padding: 0 1.5rem;
+  }
+  #testimonials .testimonials {
+    padding: 0 1.5rem;
+  }
+  #projects-section .projects {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #header-home .header-content h1 {
+    font-size: 2.5rem;
+  }
+  #header-home .header-content p {
+    font-size: 1rem;
+  }
+  #home-a .special {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home-a .special p {
+    padding: 0 1.5rem;
+  }
+  #home-b .stats {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home-c .process {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #testimonials .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #testimonials .testimonials .testimonial .img-container {
+    justify-content: center;
+  }
+  #projects-section .projects {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
