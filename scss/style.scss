@@ -32,6 +32,10 @@ img {
     width: 100%;
 }
 
+#body-content {
+    min-height: 100vh;
+}
+
 body {
     background: $main-bg-color;
 }
@@ -472,9 +476,12 @@ body {
     color: $dark-color;
 }
 
+
 #footer {
     background: $darker-color;
     color: $light-color;
+    position: absolute;
+    width: 100%;
 
     .footer-content {
         @extend %flex;
@@ -506,3 +513,6 @@ body {
         }
     }
 }
+
+
+@import 'media';

@@ -1,0 +1,129 @@
+// MEDIA Queries
+
+// Tablets & Smaller - Max width 800px
+@media(max-width: 800px) {
+
+
+
+    #header-home, #header-inner {
+        .navbar {
+            display: flex;
+            flex-direction: column;
+
+            .navbar-items {
+                margin: 1rem;
+            }
+
+        }
+    }
+
+
+    #footer {
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    #about {
+        .about-me {
+            grid-template-columns: repeat(1, 1fr);
+            .img-container {
+                margin: 0 auto;
+                max-width: 300px;
+            }
+
+            .about-content {
+                margin: 0 1.5rem;
+
+                p {
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+
+        .awards {
+            margin: 0 1.5rem;
+        }
+    }
+
+    #technical-skills {
+        .skills {
+            padding: 0 1.5rem;
+        }
+    }
+
+    #testimonials {
+        .testimonials {
+            padding: 0 1.5rem;
+        }
+    }
+
+    #projects-section {
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 1.5rem;
+        }
+    }
+
+}
+
+
+// Iphone X & Smaller - Max width 400px
+@media(max-width: 500px) {
+    #header-home {
+        .header-content {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #home-a {
+        .special {
+            grid-template-columns: repeat(1, 1fr);
+
+            p {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+
+    #home-b {
+        .stats {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    #home-c {
+        .process {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    #testimonials {
+        .testimonials {
+            grid-template-columns: repeat(1, 1fr);
+
+            .testimonial {
+                .img-container {
+                   justify-content: center;
+                }
+            }
+        }
+    }
+
+    #projects-section {
+        .projects {
+            grid-template-columns: repeat(1, 1fr);   
+        }
+    }
+}
