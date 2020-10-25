@@ -59,7 +59,17 @@
 
     #testimonials {
         .testimonials {
+            grid-template-columns: repeat(1, 1fr);
             padding: 0 1.5rem;
+
+            .testimonial {
+                max-width: 70%;
+                margin: auto;
+
+                .img-container {
+                   justify-content: center;
+                }
+            }
         }
     }
 
@@ -67,6 +77,19 @@
         .projects {
             grid-template-columns: repeat(2, 1fr);
             padding: 0 1.5rem;
+        }
+    }
+
+    #contact {
+        .contact-form {
+            padding: 0 1.5rem;
+        }
+    }
+
+    #contact-info {
+        .info-fields {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
     }
 
@@ -109,21 +132,41 @@
         }
     }
 
-    #testimonials {
-        .testimonials {
-            grid-template-columns: repeat(1, 1fr);
+    #projects-section {
+        .projects {
+            grid-template-columns: repeat(1, 1fr);   
+        }
+    }
 
-            .testimonial {
-                .img-container {
-                   justify-content: center;
+    #contact {
+        .contact-form {
+            .input-fields {
+                grid-template-areas:
+                'name'
+                'email'
+                'phone'
+                'subject'
+                'message';
+            }
+            
+            .form {
+                button {
+                    width: 100%;
                 }
             }
         }
     }
 
-    #projects-section {
-        .projects {
-            grid-template-columns: repeat(1, 1fr);   
+    #contact-info {
+        .info-fields {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 3rem;
+        }
+    }
+
+    #banner {
+        h1 {
+            font-size: 1.5rem;
         }
     }
 }

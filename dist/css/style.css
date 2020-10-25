@@ -545,6 +545,10 @@ body {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 1.5rem;
   }
+  #testimonials .testimonials .testimonial {
+    max-width: 70%;
+    margin: auto;
+  }
   #testimonials .testimonials .testimonial .img-container {
     justify-content: center;
   }
