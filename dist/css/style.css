@@ -542,11 +542,22 @@ body {
     padding: 0 1.5rem;
   }
   #testimonials .testimonials {
+    grid-template-columns: repeat(1, 1fr);
     padding: 0 1.5rem;
+  }
+  #testimonials .testimonials .testimonial .img-container {
+    justify-content: center;
   }
   #projects-section .projects {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1.5rem;
+  }
+  #contact .contact-form {
+    padding: 0 1.5rem;
+  }
+  #contact-info .info-fields {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -569,14 +580,21 @@ body {
   #home-c .process {
     grid-template-columns: repeat(1, 1fr);
   }
-  #testimonials .testimonials {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  #testimonials .testimonials .testimonial .img-container {
-    justify-content: center;
-  }
   #projects-section .projects {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #contact .contact-form .input-fields {
+    grid-template-areas: 'name' 'email' 'phone' 'subject' 'message';
+  }
+  #contact .contact-form .form button {
+    width: 100%;
+  }
+  #contact-info .info-fields {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  #banner h1 {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
